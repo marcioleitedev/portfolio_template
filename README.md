@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# 🚀 Portfólio React com AOS e Deploy no GitHub Pages
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto simples de portfólio criado com **React.js**, usando **AOS (Animate On Scroll)** para animações e com **deploy gratuito no GitHub Pages**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📥 Como usar este projeto
 
-### `npm start`
+### 1. ✅ Faça o download do projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Baixe o arquivo `.zip` do repositório e extraia para uma pasta no seu computador.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Ou clone via Git:
 
-### `npm test`
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Substitua `seu-usuario/seu-repositorio` pelo seu nome de usuário e nome do repositório no GitHub.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2. 📦 Instale as dependências
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Com o terminal aberto na raiz do projeto, rode:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. 📚 Instale bibliotecas adicionais
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### AOS (animações):
+```bash
+npm install aos
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### gh-pages (deploy no GitHub Pages):
+```bash
+npm install gh-pages --save-dev
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+### 4. ✏️ Edite suas informações
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Abra o arquivo `src/App.js` e altere:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Nome**
+- **Descrição**
+- **Projetos**
+- **Email e LinkedIn**
+- Substitua a imagem `public/profile.jpg` pela sua foto (com o mesmo nome).
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 5. ▶️ Rode o projeto localmente
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Acesse: `http://localhost:3000` no seu navegador.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 6. 🚀 Deploy no GitHub Pages
 
-### Advanced Configuration
+#### a) Edite o `package.json`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Adicione no topo:
 
-### Deployment
+```json
+"homepage": "https://seu-usuario.github.io/seu-repositorio",
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Adicione aos scripts:
 
-### `npm run build` fails to minify
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### b) Inicialize e envie ao GitHub (se ainda não fez):
+
+```bash
+git init
+git add .
+git commit -m "primeiro commit"
+git branch -M main
+git remote add origin https://github.com/seu-usuario/seu-repositorio.git
+git push -u origin main
+```
+
+#### c) Execute o deploy:
+
+```bash
+npm run deploy
+```
+
+---
+
+### 7. 🌐 Ative o GitHub Pages
+
+1. Acesse o repositório no GitHub
+2. Vá em **Settings > Pages**
+3. Em **Branch**, selecione `gh-pages`
+4. Clique em **Save**
+
+Seu portfólio estará disponível em:
+
+```
+https://seu-usuario.github.io/seu-repositorio/
+```
+
+---
+
+## 🔄 Para atualizar o projeto depois
+
+1. Edite o que quiser
+2. Rode:
+
+```bash
+git add .
+git commit -m "update"
+git push origin main
+npm run deploy
+```
+
+---
+
+## 👨‍💻 Tecnologias usadas
+
+- React.js
+- AOS (Animate On Scroll)
+- GitHub Pages
