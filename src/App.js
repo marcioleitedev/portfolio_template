@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <header className="hero" data-aos="fade-down">
-        <img src="profile.jpg" alt="Seu Nome" className="profile-pic" />
+        <img src="profile.png" alt="Seu Nome" className="profile-pic" />
         <h1>Seu Nome</h1>
         <p>Desenvolvedor Front-end | React | JavaScript</p>
       </header>
